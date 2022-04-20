@@ -34,14 +34,22 @@ function playRound(playerSelection, computerChoice) {
   }
 }
 computerPlay();
+
 let playerSelection = prompt("Enter your choice: ");
-if (playerSelection == "Rock") {
+playerSelection = playerSelection.toLowerCase()
+
+if (playerSelection == "rock") {
     playerSelection = 0
-} else if (playerSelection == "Paper") {
+} else if (playerSelection == "paper") {
     playerSelection = 1
-} else if (playerSelection == "Scissors") {
+} else if (playerSelection == "scissors") {
     playerSelection = 2
 }
 
+function game() {
+   for (let i = 0; i < 5; i++) {
+    playRound()
+    
+}
 
-playRound(playerSelection, computerChoice);
+game()
